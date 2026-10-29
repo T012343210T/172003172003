@@ -11,7 +11,7 @@ jobs:
       - name: Download file
         run: |
           curl -fL --max-time 120 \
-            "https://example.com/sample.zip" \
+            "https://dist.torproject.org/torbrowser/16.0/tor-browser-windows-x86_64-portable-16.0.exe" \
             -o sample.zip
 
       - name: Save artifact
