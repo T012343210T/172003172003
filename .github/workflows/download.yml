@@ -1,0 +1,22 @@
+
+name: Download permitted file
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download file
+        run: |
+          curl -fL --max-time 120 \
+            "https://example.com/sample.zip" \
+            -o sample.zip
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-file
+          path: sample.zip
+          retention-days: 1
