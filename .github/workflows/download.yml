@@ -11,7 +11,7 @@ jobs:
       - name: Download file
         run: |
           curl -fL --max-time 120 \
-            "https://drivers.amd.com/drivers/whql-amd-software-adrenalin-edition-26.5.2-win11-may-vega-polaris.exe" \
+            "https://drivers.amd.com/drivers/whql-amd-software-adrenalin-edition-26.5.2-win11-may-vega-polaris.zip" \
             -o sample.zip
 
       - name: Save artifact
